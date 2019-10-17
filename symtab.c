@@ -16,7 +16,16 @@ void clear(struct symbol symbol[])
 	}
 	
 }
-
+void create(struct symbol symbol[],int n)
+{
+clear(symbol);
+for(int i=0;i<n;i++)
+{
+scanf("%s %d",symbol[i].name,&symbol[i].value);
+}
+strcpy(symbol[n].name,"NULL");
+symbol[n].value=0;
+}
 
 
 void insert(struct symbol symbol[])
